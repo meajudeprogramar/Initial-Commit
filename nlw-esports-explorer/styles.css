@@ -112,7 +112,7 @@ section ul li:hover {
     /* width: 90px; */
     border-radius: 8px;
 
-    max-width:2%;
+    max-width:100%;
     height:auto;
 
 }
