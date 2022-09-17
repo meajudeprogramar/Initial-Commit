@@ -25,7 +25,6 @@ body * {
 
 header {
     padding-top: 32px;
-    /* text-align: center; */
     height: calc(120px + 32px);
 }
 
@@ -34,6 +33,7 @@ header div {
         width: 120px;
         margin: auto;
         background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% );
+        
         border-radius: 50%;
     
         display: flex;
@@ -48,10 +48,10 @@ header div {
         
     }
 
-header img {
+header div img {
     width: 100%;
     border-radius: 50%;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% );
+ /*   background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% ); */
     
 }
 
@@ -64,7 +64,7 @@ main {
     display: grid;
     gap: 24px   ;
 
-    margin-top: 32px;
+    /* margin-top: 32px; */
 }
 
 section {
@@ -75,7 +75,7 @@ section {
 }
 
 section div {
-    background-color: #2a3634;
+    background-color: #2A3634;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
@@ -88,7 +88,7 @@ section h2 {
 
 section p {
     letter-spacing: -0,18px;
-    color: #a1a1aa;
+    color: #A1A1AA;
 }
 
 /* Visualização das caixas no html */
@@ -109,8 +109,12 @@ section ul li:hover {
 }
 
 .games-list img {
-    width: 90px;
+    /* width: 90px; */
     border-radius: 8px;
+
+    max-width:2%;
+    height:auto;
+
 }
 
 .Channel-list img {
