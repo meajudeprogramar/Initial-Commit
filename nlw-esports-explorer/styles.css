@@ -1,15 +1,15 @@
-/* Remove as margens laterais criadas pelo html */
-* {
+/* Removendo as bordas do html */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Remove os pontos inseridos pelo html na lista */
 ul {
-    list-style: none;   
+    list-style: none;
 }
 
+/* Inserindo Background na TAG Body */
 body {
     background-image: url(./assets/bg.jpg);
     background-position: top center;
@@ -18,80 +18,81 @@ body {
     background-color: #121214;
 }
 
+/*Inserindo fonte do google em toda a página 
+Caso não encontro, utilizará sans-serif*/
+
 body * {
     font-family: 'inter', sans-serif;
-    line-height: 160%;
+    line-height: 160%; /* Altura da linhas */
 }
 
 header {
     padding-top: 32px;
+    text-align: center;
     height: calc(120px + 32px);
 }
 
 header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg,  #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
 
-        width: 120px;
-        margin: auto;
-        background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% );
-        
-        border-radius: 50%;
-    
-        display: flex;
-        padding: 4px;
+    border-radius: 50%;
 
-        transition: transform .3s;
-    
-    }
+    display: flex;
+    padding: 4px;
 
-    header div:hover {
-        transform: scale(1.1)
-        
-    }
+    transition: transform .3s;
+}
+
+/* Transição das imagens ao ser clicadas */
+
+header div:hover {
+    transform: scale(1.1);
+}
 
 header div img {
     width: 100%;
     border-radius: 50%;
- /*   background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% ); */
     
 }
-
 
 main {
     max-width: 580px;
     width: 90%;
-    margin: 32px auto; /* O primeiro valor de margin (32px) é referente ao espaço sup e inf */
+    margin: 32px auto;
 
     display: grid;
-    gap: 24px   ;
+    gap: 24px ;
 
-    /* margin-top: 32px; */
 }
 
 section {
     color: white;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% );
+    background-image: linear-gradient(90deg,  #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     padding-top: 4px;
     border-radius: 10px;
 }
 
 section div {
-    background-color: #2A3634;
+    background-color: #2a2634;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
 }
 
+/* Espaçamento dos Título das Caixas */
 section h2 {
     letter-spacing: -0,47px;
-
 }
 
 section p {
-    letter-spacing: -0,18px;
-    color: #A1A1AA;
+    letter-spacing: -0.18px;
+    color: #a1a1aa;
 }
 
-/* Visualização das caixas no html */
+/* Display - Tem haver coma as visualização no html 
+    Display: flex - deixa as caixas uma ao lado da outra*/
 section ul {
     display: flex;
     flex-wrap: wrap;
@@ -100,24 +101,28 @@ section ul {
     margin-top: 24px;
 }
 
+/* Transição nos cartõzinhos */
 section ul li {
     transition: transform .3s;
 }
 
 section ul li:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+
 }
 
-.games-list img {
-    /* width: 90px; */
+/* Inserindo bordas nas imagens .films-list*/
+.films-list img {
+    width: 90px;
     border-radius: 8px;
-
-    max-width:100%;
-    height:auto;
-
 }
 
-.Channel-list img {
+.ebook-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
     border-radius: 50%;
     width: 70px;
     border: 1px solid #443e54;
@@ -126,46 +131,48 @@ section ul li:hover {
 /* A N I M A T I O N */
 
 header div {
-    animation: fomTop .7s 4s backwards;
+    animation: fromTop .7s 2s backwards;
     
 }
 
 main section {
-
     animation: fromBottom .7s backwards;
+
 }
 
 main section:nth-child(1) {
-    animation-delay: 0;
+    animation-delay: 0; 
 }
 
 main section:nth-child(2) {
-    animation-delay: 3;
+    animation-delay: .3s; 
 }
 
 main section:nth-child(3) {
-    animation-delay: 6;
+    animation-delay: .6s; 
 }
+
+/* Animação header - foto do topo */
 
 @keyframes fromTop {
     from {
         opacity: 0;
         transform: translateY(-30px);
     }
+    
     to {
         opacity: 1;
-        transform: translateY(0)
-    }
+        transform: translateY(0);}
 }
 
 @keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(30px);
     }
+    
     to {
         opacity: 1;
-        transform: translateY(0)
-    }
+        transform: translateY(0);}
     
 }
